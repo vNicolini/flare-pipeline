@@ -7,8 +7,13 @@ from PyQt6.QtCore import Qt, QSize
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-
+        
+        # Set window Title
         self.setWindowTitle("App Launcher")
+
+        # Set window icon
+        app_icon = QIcon("F:/Pipeline/Utilities/Executables/Launcher/icons/favicon.ico")
+        self.setWindowIcon(app_icon)
 
         # Set dark theme using stylesheet
         self.set_style_sheet()
