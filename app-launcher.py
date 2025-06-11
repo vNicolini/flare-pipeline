@@ -9,7 +9,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         
         # Set window Title
-        self.setWindowTitle("App Launcher")
+        self.setWindowTitle("Flare DCC Launcher")
 
         # Set window icon
         app_icon = QIcon("F:/Pipeline/Utilities/Executables/Launcher/icons/favicon.ico")
