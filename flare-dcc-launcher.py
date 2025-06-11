@@ -5,14 +5,18 @@ from PyQt6.QtGui import QIcon, QAction
 from PyQt6.QtCore import Qt, QSize
 
 class MainWindow(QMainWindow):
+    APP_TITLE = "Flare DCC Launcher"
+    ICON_PATH = "F:/Pipeline/Utilities/Executables/Launcher/icons/v002/favicon.ico"
+    TRAY_TOOLTIP = "Flare Launcher"
+    
     def __init__(self):
         super().__init__()
         
         # Set window Title
-        self.setWindowTitle("Flare DCC Launcher")
+        self.setWindowTitle(self.APP_TITLE)
 
         # Set window icon
-        app_icon = QIcon("F:/Pipeline/Utilities/Executables/Launcher/icons/favicon.ico")
+        app_icon = QIcon(self.ICON_PATH)
         self.setWindowIcon(app_icon)
 
         # Set dark theme using stylesheet
@@ -153,9 +157,9 @@ class MainWindow(QMainWindow):
         self.tray_icon = QSystemTrayIcon(self)
     
         # Set tray icon (use appropriate path for your application icon)
-        icon = QIcon("F:/Pipeline/Utilities/Executables/Launcher/icons/favicon.ico")
+        icon = QIcon(self.ICON_PATH)
         self.tray_icon.setIcon(icon)
-        self.tray_icon.setToolTip("App Launcher")
+        self.tray_icon.setToolTip(self.TRAY_TOOLTIP)
     
         # Create a menu for the system tray
         tray_menu = QMenu()
