@@ -54,6 +54,11 @@ class MainWindow(QMainWindow):
                             ("Arnold Core 7.4.2.0", self.launch_gaffer15140_Arnold7420),
                             ("Arnold Core 7.4.2.0 and RenderMan 26.3", self.launch_gaffer15140_Arnold7420_Prman263)]),
 
+                            ("Gaffer 1.5.15.0", "C:/Program Files/Gaffer/1.5.15.0/graphics/GafferLogoMini.png",
+                            [("RenderMan 26.3", self.launch_gaffer15150_Prman263),
+                            ("Arnold Core 7.4.2.0", self.launch_gaffer15150_Arnold7420),
+                            ("Arnold Core 7.4.2.0 and RenderMan 26.3", self.launch_gaffer15150_Arnold7420_Prman263)]),
+
                             ("Maya 2025.3", "C:/Program Files/Autodesk/Maya2025/icons/mayaico.png",
                             [("RenderMan 26.3", self.launch_maya25_Prman263),
                             ("MtoA 5.5.2.0 (Core 7.4.2.0)", self.launch_maya25_Arnold5520)]))
@@ -181,63 +186,75 @@ class MainWindow(QMainWindow):
 
 
     def launch_gaffer15140_Prman263(self):
-        command = "pwsh -NoExit -Command rez-env gaffer_software==1.5.14.0 renderman_gaffer_plugin==26.3 -- gaffer"
+        command = "pwsh -NoExit -Command rez-env gaffer_software-1.5.14.0 renderman_gaffer_plugin-26.3 -- gaffer"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_gaffer15140_Arnold7420(self):
-        command = "pwsh -NoExit -Command rez-env gaffer_software==1.5.14.0 arnold_core_plugin==7.4.2.0 -- gaffer"
+        command = "pwsh -NoExit -Command rez-env gaffer_software-1.5.14.0 arnold_core_plugin-7.4.2.0 -- gaffer"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_gaffer15140_Arnold7420_Prman263(self):
-        command = "pwsh -NoExit -Command rez-env gaffer_software==1.5.14.0 arnold_core_plugin==7.4.2.0 renderman_gaffer_plugin==26.3 -- gaffer"
+        command = "pwsh -NoExit -Command rez-env gaffer_software-1.5.14.0 arnold_core_plugin-7.4.2.0 renderman_gaffer_plugin-26.3 -- gaffer"
+        subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
+        
+    def launch_gaffer15150_Prman263(self):
+        command = "pwsh -NoExit -Command rez-env gaffer_software-1.5.15.0 renderman_gaffer_plugin-26.3 -- gaffer"
+        subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
+
+    def launch_gaffer15150_Arnold7420(self):
+        command = "pwsh -NoExit -Command rez-env gaffer_software-1.5.15.0 arnold_core_plugin-7.4.2.0 -- gaffer"
+        subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
+
+    def launch_gaffer15150_Arnold7420_Prman263(self):
+        command = "pwsh -NoExit -Command rez-env gaffer_software-1.5.15.0 arnold_core_plugin-7.4.2.0 renderman_gaffer_plugin-26.3 -- gaffer"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_maya25(self):
-        command = "pwsh -NoExit -Command rez-env maya_software==2025.3 -- maya"
+        command = "pwsh -NoExit -Command rez-env maya_software-2025.3 -- maya"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_maya25_Prman263(self):
-        command = "pwsh -NoExit -Command rez-env maya_software==2025.3 renderman_maya_plugin==26.3 -- maya"
+        command = "pwsh -NoExit -Command rez-env maya_software-2025.3 renderman_maya_plugin-26.3 -- maya"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_maya25_Arnold5520(self):
-        command = "pwsh -NoExit -Command rez-env maya_software==2025.3 arnold_maya_plugin==5.5.2.0 -- maya"
+        command = "pwsh -NoExit -Command rez-env maya_software-2025.3 arnold_maya_plugin-5.5.2.0 -- maya"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_max23(self):
-        command = "pwsh -NoExit -Command rez-env 3dsmax_software==2023.2.2 -- 3dsmax"
+        command = "pwsh -NoExit -Command rez-env 3dsmax_software-2023.2 -- 3dsmax"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_max25(self):
-        command = "pwsh -NoExit -Command rez-env 3dsmax_software==2025.3 -- 3dsmax"
+        command = "pwsh -NoExit -Command rez-env 3dsmax_software-2025.3 -- 3dsmax"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_houdini205445_core(self):
-        command = "pwsh -NoExit -Command rez-env houdini_software==20.5.445 -- houdinicore"
+        command = "pwsh -NoExit -Command rez-env houdini_software-20.5.445 -- houdinicore"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_houdini205445_fx(self):
-        command = "pwsh -NoExit -Command rez-env houdini_software==20.5.445 -- houdinifx"
+        command = "pwsh -NoExit -Command rez-env houdini_software-20.5.445 -- houdinifx"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_nuke1521_nc(self):
-        command = "pwsh -NoExit -Command rez-env nuke_software==15.2.1 -- nuke15.2 --nc"
+        command = "pwsh -NoExit -Command rez-env nuke_software-15.2.1 -- nuke15.2 --nc"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_nukeStudio1521_nc(self):
-        command = "pwsh -NoExit -Command rez-env nuke_software==15.2.1 -- nuke15.2 --studio --nc"
+        command = "pwsh -NoExit -Command rez-env nuke_software-15.2.1 -- nuke15.2 --studio --nc"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_nukeX1521_nc(self):
-        command = "pwsh -NoExit -Command rez-env nuke_software==15.2.1 -- nuke15.2 --nukex --nc"
+        command = "pwsh -NoExit -Command rez-env nuke_software-15.2.1 -- nuke15.2 --nukex --nc"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_hiero1521(self):
-        command = "pwsh -NoExit -Command rez-env nuke_software==15.2.1 -- nuke15.2 --hiero"
+        command = "pwsh -NoExit -Command rez-env nuke_software-15.2.1 -- nuke15.2 --hiero"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_hieroPlayer1521(self):
-        command = "pwsh -NoExit -Command rez-env nuke_software==15.2.1 -- nuke15.2 --player"
+        command = "pwsh -NoExit -Command rez-env nuke_software-15.2.1 -- nuke15.2 --player"
         subprocess.Popen(command, shell=True, creationflags=subprocess.CREATE_NEW_CONSOLE)
 
     def launch_syntheyes(self):
