@@ -6,19 +6,22 @@ applications:
     rez_package: maya_software-2025
     description: "Autodesk Maya 2025"
     command: maya
-    icon: flarelauncher/icons/dcc/maya.png
+    icon: icons\dcc\maya.png
+    department: "Modeling / Rigging / Animation / Layout"
 
   - name: "Maya 2025 + Renderman 26.3"
     rez_package: maya_software-2025 renderman_maya_plugin-26.3
     description: "Autodesk Maya 2025 + Renderman 26.3"
     command: maya
-    icon: flarelauncher/icons/dcc/maya.png
+    icon: icons\dcc\maya.png
+    department: "Assembly / LookDev / Lighting"
 
   - name: "Maya 2025 + MtoA 5.5.2.0 (Core 7.4.2.0)"
     rez_package: maya_software-2025 arnold_maya_plugin-5.5.2.0
     description: "Autodesk Maya 2025 + MtoA 5.5.2.0 (Core 7.4.2.0)"
     command: maya
-    icon: flarelauncher/icons/dcc/maya.png
+    icon: icons\dcc\maya.png
+    department: "Assembly / LookDev / Lighting"
 
           ###### 3dsmax ######
 
@@ -26,13 +29,15 @@ applications:
     rez_package: 3dsmax_software-2023
     description: "Autodesk 3dsmax 2023"
     command: 3dsmax
-    icon: flarelauncher/icons/dcc/3dsmax.ico
+    icon: icons\dcc\3dsmax.ico
+    department: "Modeling / Rigging / Animation / Layout"
 
   - name: "3dsmax 2025"
     rez_package: 3dsmax_software-2025
     description: "Autodesk 3dsmax 2025"
     command: 3dsmax
-    icon: flarelauncher/icons/dcc/3dsmax.ico
+    icon: icons\dcc\3dsmax.ico
+    department: "Modeling / Rigging / Animation / Layout"
 
           ###### Houdini ######
 
@@ -40,13 +45,15 @@ applications:
     rez_package: houdini_software-20.5.445
     description: "Houdini Core 20.5.445"
     command: houdinicore
-    icon: flarelauncher/icons/dcc/houdini.ico
+    icon: icons\dcc\houdini.ico
+    department: "CFX / FX / Environment"
 
   - name: "Houdini FX 20.5.445"
     rez_package: houdini_software-20.5.445
     description: "Houdini FX 20.5.445"
     command: houdinifx
-    icon: flarelauncher/icons/dcc/houdini.ico
+    icon: icons\dcc\houdini.ico
+    department: "CFX / FX / Environment"
 
           ###### Gaffer ######
 
@@ -54,37 +61,43 @@ applications:
     rez_package: gaffer_software-1.5.14.0 renderman_gaffer_plugin-26.3
     description: "Gaffer 1.5.14.0 + Renderman 26.3"
     command: gaffer
-    icon: flarelauncher/icons/dcc/gaffer.png
+    icon: icons\dcc\gaffer.png
+    department: "Assembly / LookDev / Lighting"
 
   - name: "Gaffer 1.5.15.0 + Renderman 26.3"
     rez_package: gaffer_software-1.5.15.0 renderman_gaffer_plugin-26.3
     description: "Gaffer 1.5.15.0 + Renderman 26.3"
     command: gaffer
-    icon: flarelauncher/icons/dcc/gaffer.png
+    icon: icons\dcc\gaffer.png
+    department: "Assembly / LookDev / Lighting"
 
   - name: "Gaffer 1.5.14.0 + Arnold Core 7.4.2.0"
     rez_package: gaffer_software-1.5.14.0 arnold_core_plugin-7.4.2.0
     description: "Gaffer 1.5.14.0 + Arnold Core 7.4.2.0"
     command: gaffer
-    icon: flarelauncher/icons/dcc/gaffer.png
+    icon: icons\dcc\gaffer.png
+    department: "Assembly / LookDev / Lighting"
 
   - name: "Gaffer 1.5.15.0 + Arnold Core 7.4.2.0"
     rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.2.0
     description: "Gaffer 1.5.15.0 + Arnold Core 7.4.2.0"
     command: gaffer
-    icon: flarelauncher/icons/dcc/gaffer.png
+    icon: icons\dcc\gaffer.png
+    department: "Assembly / LookDev / Lighting"
 
   - name: "Gaffer 1.5.14.0 + Arnold Core 7.4.2.0 + Renderman 26.3"
     rez_package: gaffer_software-1.5.14.0 arnold_core_plugin-7.4.2.0 renderman_gaffer_plugin-26.3
     description: "Gaffer 1.5.14.0 + Arnold Core 7.4.2.0 + Renderman 26.3"
     command: gaffer
-    icon: flarelauncher/icons/dcc/gaffer.png
+    icon: icons\dcc\gaffer.png
+    department: "Assembly / LookDev / Lighting"
 
   - name: "Gaffer 1.5.15.0 + Arnold Core 7.4.2.0 + Renderman 26.3"
     rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.2.0 renderman_gaffer_plugin-26.3
     description: "Gaffer 1.5.15.0 + Arnold Core 7.4.2.0 + Renderman 26.3"
     command: gaffer
-    icon: flarelauncher/icons/dcc/gaffer.png
+    icon: icons\dcc\gaffer.png
+    department: "Assembly / LookDev / Lighting"
 
           ###### Nuke ######
 
@@ -92,19 +105,22 @@ applications:
     rez_package: nuke_software-15.2.1
     description: "Nuke 15.2v1 Non-Commercial"
     command: nuke15.2 --nc
-    icon: flarelauncher/icons/dcc/nuke.png 
+    icon: icons\dcc\nuke.png 
+    department: "Compositing / Editing / Review"
 
   - name: "NukeStudio 15.2v1 NC"
     rez_package: nuke_software-15.2.1
     description: "NukeStudio 15.2v1 Non-Commercial"
     command: nuke15.2 --studio --nc
-    icon: flarelauncher/icons/dcc/nuke.png     
+    icon: icons\dcc\nuke.png     
+    department: "Compositing / Editing / Review"
 
   - name: "NukeX 15.2v1 NC"
     rez_package: nuke_software-15.2.1
     description: "NukeX 15.2v1 Non-Commercial"
     command: nuke15.2 --nukex --nc
-    icon: flarelauncher/icons/dcc/nuke.png    
+    icon: icons\dcc\nuke.png    
+    department: "Compositing / Editing / Review"
 
           ###### Hiero ######
 
@@ -112,13 +128,15 @@ applications:
     rez_package: nuke_software-15.2.1
     description: "Hiero 15.2v1"
     command: nuke15.2 --hiero
-    icon: flarelauncher/icons/dcc/hiero.png 
+    icon: icons\dcc\hiero.png 
+    department: "Compositing / Editing / Review"
 
   - name: "Hiero Player 15.2v1"
     rez_package: nuke_software-15.2.1
     description: "Hiero Player 15.2v1"
     command: nuke15.2 --player
-    icon: flarelauncher/icons/dcc/hiero.png 
+    icon: icons\dcc\hiero.png 
+    department: "Compositing / Editing / Review"
 
           ###### OpenRV ######
           
@@ -126,7 +144,8 @@ applications:
     rez_package: openrv_software
     description: "OpenRV 1.0"
     command: rv.exe
-    icon: flarelauncher/icons/dcc/openrv.png 
+    icon: icons\dcc\openrv.png 
+    department: "Compositing / Editing / Review"
 
           ###### Mari ######
           
@@ -134,13 +153,15 @@ applications:
     rez_package: mari_software-7.1.2
     description: "Mari 7.1v2 Non-Commercial"
     command: Mari7.1v2 --nc -platform windows:nowmpointer
-    icon: flarelauncher/icons/dcc/mari.png
+    icon: icons\dcc\mari.png
+    department: "Texturing"
 
   - name: "Mari 7.1v2"
     rez_package: mari_software-7.1.2
     description: "Mari 7.1v2"
     command: Mari7.1v2 -platform windows:nowmpointer
-    icon: flarelauncher/icons/dcc/mari.png 
+    icon: icons\dcc\mari.png 
+    department: "Texturing"
 
             ###### Substance Painter ######
           
@@ -148,7 +169,7 @@ applications:
     rez_package: substancePainter_software-11.0.1
     description: "Adobe Substance 3D Painter 11.0.1"
     command: 'Adobe Substance 3D Painter'
-    icon: flarelauncher/icons/dcc/painter.png 
+    icon: icons\dcc\painter.png 
 
             ###### SynthEyes ######
           
@@ -156,4 +177,5 @@ applications:
     rez_package: syntheyes_software-2024
     description: "Syntheyes 2024"
     command: SynthEyes64
-    icon: flarelauncher/icons/dcc/syntheyes.png 
+    icon: icons\dcc\syntheyes.png 
+    department: "Compositing / Editing / Review"
