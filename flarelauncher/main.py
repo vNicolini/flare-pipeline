@@ -43,9 +43,13 @@ class FlareLauncher(QWidget):
 
                 icon_path = app.get("icon")
                 if icon_path and os.path.exists(icon_path):
+                    print(f"Icon found at: {icon_path}")
                     item.setIcon(QIcon(icon_path))
+                else:
+                    print(f"Icon not found at: {icon_path}")
 
                 self.list_widget.addItem(item)
+
 
     def launch_selected_app(self):
         index = self.list_widget.currentRow()
@@ -54,6 +58,13 @@ class FlareLauncher(QWidget):
             launch_app_with_rez(app["rez_package"], app["command"])
 
 def main():
+    app = QApplication(sys.argv)
+    window = FlareLauncher()
+    window.show()
+    sys.exit(app.exec())
+
+if __name__ == "__main__":
+    main()
     app = QApplication(sys.argv)
     window = FlareLauncher()
     window.show()
