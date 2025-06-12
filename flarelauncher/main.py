@@ -1,6 +1,6 @@
 import sys
 from PyQt6.QtWidgets import QApplication
-from ui_main import FlareLauncher
+from flarelauncher.ui import FlareLauncher
 
 def main():
     app = QApplication(sys.argv)
