@@ -1,0 +1,12 @@
+applications:
+  - name: Maya
+    rez_package: maya_software-2025
+    description: "Autodesk Maya 2025"
+    command: maya
+    icon: icons/maya.png
+
+  - name: Nuke
+    rez_package: nuke-15.0v1
+    description: "Foundry Nuke 15.0v1"
+    command: Nuke
+    icon: icons/nuke.png
