@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import os
 import sys
 import subprocess
@@ -296,3 +297,17 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
     sys.exit(app.exec())
+=======
+import sys
+from PyQt6.QtWidgets import QApplication
+from flarelauncher.ui import FlareLauncher
+
+def main():
+    app = QApplication(sys.argv)
+    window = FlareLauncher()
+    window.show()
+    sys.exit(app.exec())
+
+if __name__ == "__main__":
+    main()
+>>>>>>> b19d504 (clean name)
