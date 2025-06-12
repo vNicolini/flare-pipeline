@@ -247,19 +247,19 @@ applications:
 
           ###### Nuke ######
 
-   - name: "Nuke 15.2v1 NC"
+  - name: "Nuke 15.2v1 NC"
     rez_package: nuke_software-15.2.1
     description: "Nuke 15.2v1 Non-Commercial"
     command: nuke15.2 --nc
     icon: icons/dcc/nuke.png 
 
-   - name: "NukeStudio 15.2v1 NC"
+  - name: "NukeStudio 15.2v1 NC"
     rez_package: nuke_software-15.2.1
     description: "NukeStudio 15.2v1 Non-Commercial"
     command: nuke15.2 --studio --nc
     icon: icons/dcc/nuke.png     
 
-   - name: "NukeX 15.2v1 NC"
+  - name: "NukeX 15.2v1 NC"
     rez_package: nuke_software-15.2.1
     description: "NukeX 15.2v1 Non-Commercial"
     command: nuke15.2 --nukex --nc
@@ -267,13 +267,13 @@ applications:
 
           ###### Hiero ######
 
-    - name: "Hiero 15.2v1"
+  - name: "Hiero 15.2v1"
     rez_package: nuke_software-15.2.1
     description: "Hiero 15.2v1"
     command: nuke15.2 --hiero
     icon: icons/dcc/hiero.png 
 
-    - name: "Hiero Player 15.2v1"
+  - name: "Hiero Player 15.2v1"
     rez_package: nuke_software-15.2.1
     description: "Hiero Player 15.2v1"
     command: nuke15.2 --player
@@ -281,7 +281,7 @@ applications:
 
           ###### OpenRV ######
           
-    - name: "OpenRV 1.0"
+  - name: "OpenRV 1.0"
     rez_package: openrv_software
     description: "OpenRV 1.0"
     command: rv.exe
@@ -289,13 +289,13 @@ applications:
 
           ###### Mari ######
           
-    - name: "Mari 7.1v2 NC"
+  - name: "Mari 7.1v2 NC"
     rez_package: mari_software-7.1.2
     description: "Mari 7.1v2 Non-Commercial"
     command: Mari7.1v2 --nc -platform windows:nowmpointer
     icon: icons/dcc/mari.png
 
-    - name: "Mari 7.1v2"
+  - name: "Mari 7.1v2"
     rez_package: mari_software-7.1.2
     description: "Mari 7.1v2"
     command: Mari7.1v2 -platform windows:nowmpointer
@@ -303,7 +303,7 @@ applications:
 
             ###### Substance Painter ######
           
-    - name: "Adobe Substance 3D Painter 11.0.1"
+  - name: "Adobe Substance 3D Painter 11.0.1"
     rez_package: substancePainter_software-11.0.1
     description: "Adobe Substance 3D Painter 11.0.1"
     command: 'Adobe Substance 3D Painter'
@@ -311,7 +311,7 @@ applications:
 
             ###### SynthEyes ######
           
-    - name: "Syntheyes 2024"
+  - name: "Syntheyes 2024"
     rez_package: syntheyes_software-2024
     description: "Syntheyes 2024"
     command: SynthEyes64
