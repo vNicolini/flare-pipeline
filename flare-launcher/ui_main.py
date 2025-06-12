@@ -26,7 +26,7 @@ class FlareLauncher(QWidget):
         self.launch_button.clicked.connect(self.launch_selected_app)
 
     def load_applications(self):
-        with open("config.yaml", "r") as file:
+        with open("..\flare-launcher-config.yaml", "r") as file:
             config = yaml.safe_load(file)
             print("Loaded config:", config)  # Debug line
 
