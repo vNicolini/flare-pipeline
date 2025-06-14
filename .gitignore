@@ -1,4 +1,8 @@
 *.spec
 /build
 /dist
+<<<<<<< HEAD
 */__pycache__
+=======
+.venv
+>>>>>>> e9be97ea142c672ee52865e0d582e6de96e9b605
