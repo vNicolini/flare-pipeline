@@ -27,6 +27,13 @@ class MainWindow(QMainWindow):
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         self.layout = QVBoxLayout(central_widget)
+        
+        # Wrap the central widget in a scroll area
+        scroll_area = QScrollArea()
+        scroll_area.setWidgetResizable(True)
+        scroll_area.setWidget(central_widget)
+        scroll_area.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.setCentralWidget(scroll_area)
 
         # Load configuration from YAML file
         self.load_config()
@@ -112,12 +119,8 @@ class MainWindow(QMainWindow):
 
         group_box.setLayout(layout)
 
-        # Add the group box to a scrollable area
-        scroll_area = QScrollArea()
-        scroll_area.setWidgetResizable(True)
-        scroll_area.setWidget(group_box)
-        scroll_area.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.layout.addWidget(scroll_area)
+        # Add the group box to the main layout
+        self.layout.addWidget(group_box)
 
     def add_button(self, text, icon_path, actions, layout, row, col):
         button = QPushButton(text)
@@ -135,6 +138,15 @@ class MainWindow(QMainWindow):
 
         button.setMenu(menu)
         layout.addWidget(button, row, col)  # Add to the calculated position in grid
+
+        return button
+
+    def set_uniform_button_size(self, buttons):
+        max_width = max(button.sizeHint().width() for button in buttons)
+        max_height = max(button.sizeHint().height() for button in buttons)
+
+        for button in buttons:
+            button.setFixedSize(max_width, max_height)
 
     def create_tray_icon(self):
         self.tray_icon = QSystemTrayIcon(self)
@@ -170,6 +182,13 @@ class MainWindow(QMainWindow):
         if reason == QSystemTrayIcon.ActivationReason.Trigger:
             if self.isHidden() or not self.isVisible():
                 self.showNormal()
+
+    def resizeEvent(self, event):
+        # Calculate the width of a single button
+        button_width = self.layout.itemAt(0).widget().layout().itemAt(0).widget().sizeHint().width()
+        # Set the window width to accommodate exactly 2 buttons
+        self.setFixedWidth(button_width * 3 + 50)  # Add some padding
+        super().resizeEvent(event)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
