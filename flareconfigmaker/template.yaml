@@ -1,0 +1,12 @@
+applications:
+
+  - name: ""
+    department: ""
+    icon: 
+    environment:
+      - name: ""
+        rez_package: 
+        command: 
+      - name: ""
+        rez_package: 
+        command: 
