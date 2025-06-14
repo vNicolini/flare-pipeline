@@ -44,6 +44,16 @@ class MainWindow(QMainWindow):
         # Add buttons to the top-right corner
         self.add_config_buttons()
 
+<<<<<<< HEAD
+        # Add buttons to the top-right corner
+=======
+        # Add a button to the top-right corner
+        self.add_config_button()
+
+        # Add a button to change the config file and refresh the UI
+>>>>>>> 5904573 (add config button)
+        self.add_config_buttons()
+
         # Load configuration from YAML file
         self.load_config()
 
