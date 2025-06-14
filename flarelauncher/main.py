@@ -1,7 +1,7 @@
 import os
 import sys
 import subprocess
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QGroupBox, QScrollArea, QMenu, QGridLayout, QVBoxLayout, QSystemTrayIcon, QHBoxLayout, QDialog, QTextEdit, QLabel, QPushButton, QFileDialog
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QGroupBox, QScrollArea, QMenu, QGridLayout, QVBoxLayout, QSystemTrayIcon, QHBoxLayout, QDialog, QTextEdit, QLabel, QComboBox, QFileDialog
 from PyQt6.QtGui import QIcon, QAction
 from PyQt6.QtCore import Qt, QSize
 import yaml
@@ -10,12 +10,14 @@ class MainWindow(QMainWindow):
     APP_TITLE = "Flare DCC Launcher"
     ICON_PATH = "icons/flare-launcher.png"
     TRAY_TOOLTIP = "Flare Launcher"
+    CONFIG_DIR = "../"  # Directory containing YAML configuration files
+    DEFAULT_CONFIG = "../flare-launcher-config.yaml"  # Default configuration file
 
     def __init__(self):
         super().__init__()
 
         # Initialize the config file path
-        self.config_file_path = os.path.abspath('../flare-launcher-config.yaml')
+        self.config_file_path = os.path.abspath(self.DEFAULT_CONFIG)
 
         # Set window Title
         self.setWindowTitle(self.APP_TITLE)
@@ -228,10 +230,13 @@ class MainWindow(QMainWindow):
         config_button.clicked.connect(self.show_config_window)
         top_layout.addWidget(config_button)
 
-        # Add the "Change Config" button
-        change_config_button = QPushButton("Change Config")
-        change_config_button.clicked.connect(self.change_config_file)
-        top_layout.addWidget(change_config_button)
+        # Add the "Change Config" dropdown menu
+        self.config_dropdown = QComboBox()
+        self.config_dropdown.addItem("Browse...")
+        self.load_config_files()
+        self.config_dropdown.setCurrentText(os.path.basename(self.DEFAULT_CONFIG))
+        self.config_dropdown.currentIndexChanged.connect(self.on_config_selected)
+        top_layout.addWidget(self.config_dropdown)
 
         # Add the "Refresh" button
         refresh_button = QPushButton("Refresh")
@@ -241,15 +246,26 @@ class MainWindow(QMainWindow):
         # Add the top layout to the main layout
         self.layout.insertLayout(0, top_layout)
 
-    def change_config_file(self):
-        # Open a file dialog to select a new config file
+    def load_config_files(self):
+        if os.path.exists(self.CONFIG_DIR):
+            for file_name in os.listdir(self.CONFIG_DIR):
+                if file_name.endswith('.yaml'):
+                    self.config_dropdown.addItem(file_name)
+
+    def on_config_selected(self, index):
+        selected_text = self.config_dropdown.currentText()
+        if selected_text == "Browse...":
+            self.browse_config_file()
+        else:
+            self.config_file_path = os.path.join(self.CONFIG_DIR, selected_text)
+            self.refresh_ui()
+
+    def browse_config_file(self):
         options = QFileDialog.Option.ReadOnly
         file_name, _ = QFileDialog.getOpenFileName(self, "Select Configuration File", "", "YAML Files (*.yaml);;All Files (*)", options=options)
 
         if file_name:
-            # Update the config file path
             self.config_file_path = file_name
-            # Reload the UI with the new config file
             self.refresh_ui()
 
     def refresh_ui(self):
@@ -264,6 +280,7 @@ class MainWindow(QMainWindow):
 
         # Add categories and buttons based on the new configuration
         self.add_categories_from_config()
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
