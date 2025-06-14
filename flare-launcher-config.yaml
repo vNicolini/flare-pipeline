@@ -159,19 +159,8 @@ applications:
 
 applications:
 
-          ###### Maya ######
-
   - name: "Maya 2025"
-    rez_package: maya_software-2025
-    description: "Autodesk Maya 2025"
-    command: maya
-    icon: icons\dcc\maya.png
     department: "Modeling / Rigging / Animation / Layout"
-
-  - name: "Maya 2025 + Renderman 26.3"
-    rez_package: maya_software-2025 renderman_maya_plugin-26.3
-    description: "Autodesk Maya 2025 + Renderman 26.3"
-    command: maya
     icon: icons\dcc\maya.png
     department: "Assembly / LookDev / Lighting"
 
@@ -185,17 +174,14 @@ applications:
           ###### 3dsmax ######
 
   - name: "3dsmax 2023"
-    rez_package: 3dsmax_software-2023
-    description: "Autodesk 3dsmax 2023"
-    command: 3dsmax
-    icon: icons\dcc\3dsmax.ico
     department: "Modeling / Rigging / Animation / Layout"
-
-  - name: "3dsmax 2025"
-    rez_package: 3dsmax_software-2025
-    description: "Autodesk 3dsmax 2025"
-    command: 3dsmax
     icon: icons\dcc\3dsmax.ico
+    environment:
+      - name: "3dsmax 2023"
+        rez_package: 3dsmax_software-2023
+        command: 3dsmax
+  
+  - name: "3dsmax 2025"
     department: "Modeling / Rigging / Animation / Layout"
 
           ###### Houdini ######
@@ -206,11 +192,6 @@ applications:
     command: houdinicore
     icon: icons\dcc\houdini.ico
     department: "CFX / FX / Environment"
-
-  - name: "Houdini FX 20.5.445"
-    rez_package: houdini_software-20.5.445
-    description: "Houdini FX 20.5.445"
-    command: houdinifx
     icon: icons\dcc\houdini.ico
     department: "CFX / FX / Environment"
 
@@ -266,75 +247,60 @@ applications:
     command: nuke15.2 --nc
     icon: icons\dcc\nuke.png 
     department: "Compositing / Editing / Review"
-
-  - name: "NukeStudio 15.2v1 NC"
-    rez_package: nuke_software-15.2.1
-    description: "NukeStudio 15.2v1 Non-Commercial"
-    command: nuke15.2 --studio --nc
-    icon: icons\dcc\nuke.png     
-    department: "Compositing / Editing / Review"
-
-  - name: "NukeX 15.2v1 NC"
-    rez_package: nuke_software-15.2.1
-    description: "NukeX 15.2v1 Non-Commercial"
-    command: nuke15.2 --nukex --nc
-    icon: icons\dcc\nuke.png    
-    department: "Compositing / Editing / Review"
-
-          ###### Hiero ######
-
+    icon: icons\dcc\nuke.png
+    environment:
+      - name: "Nuke 15.2v1 Non-Commercial"
+        rez_package: nuke_software-15.2.1
+        command: nuke15.2 --nc
+      - name: "NukeStudio 15.2v1 Non-Commercial"
+        rez_package: nuke_software-15.2.1
+        command: nuke15.2 --studio --nc
+      - name: "NukeX 15.2v1 Non-Commercial"
+        rez_package: nuke_software-15.2.1
+        command: nuke15.2 --nukex --nc
+  
   - name: "Hiero 15.2v1"
-    rez_package: nuke_software-15.2.1
-    description: "Hiero 15.2v1"
-    command: nuke15.2 --hiero
-    icon: icons\dcc\hiero.png 
     department: "Compositing / Editing / Review"
-
-  - name: "Hiero Player 15.2v1"
-    rez_package: nuke_software-15.2.1
-    description: "Hiero Player 15.2v1"
-    command: nuke15.2 --player
-    icon: icons\dcc\hiero.png 
-    department: "Compositing / Editing / Review"
-
-          ###### OpenRV ######
-          
+    icon: icons\dcc\hiero.png
+    environment:
+      - name: "Hiero 15.2v1"
+        rez_package: nuke_software-15.2.1
+        command: nuke15.2 --hiero
+      - name: "Hiero Player 15.2v1"
+        rez_package: nuke_software-15.2.1
+        command: nuke15.2 --player
+  
   - name: "OpenRV 1.0"
-    rez_package: openrv_software
-    description: "OpenRV 1.0"
-    command: rv.exe
-    icon: icons\dcc\openrv.png 
     department: "Compositing / Editing / Review"
+    icon: icons\dcc\openrv.png
+    environment:
+      - name: "OpenRV 1.0"
+        rez_package: openrv_software
+        command: rv.exe
 
-          ###### Mari ######
-          
-  - name: "Mari 7.1v2 NC"
-    rez_package: mari_software-7.1.2
-    description: "Mari 7.1v2 Non-Commercial"
-    command: Mari7.1v2 --nc -platform windows:nowmpointer
-    icon: icons\dcc\mari.png
-    department: "Texturing"
-
-  - name: "Mari 7.1v2"
-    rez_package: mari_software-7.1.2
-    description: "Mari 7.1v2"
-    command: Mari7.1v2 -platform windows:nowmpointer
-    icon: icons\dcc\mari.png 
-    department: "Texturing"
-
-            ###### Substance Painter ######
-          
-  - name: "Adobe Substance 3D Painter 11.0.1"
-    rez_package: substancePainter_software-11.0.1
-    description: "Adobe Substance 3D Painter 11.0.1"
-    command: 'Adobe Substance 3D Painter'
-    icon: icons\dcc\painter.png 
-
-            ###### SynthEyes ######
-          
   - name: "Syntheyes 2024"
-    rez_package: syntheyes_software-2024
-    description: "Syntheyes 2024"
-    command: SynthEyes64
-    icon: icons\dcc\syntheyes.png 
     department: "Compositing / Editing / Review"
+    icon: icons\dcc\syntheyes.png
+    environment:
+      - name: "Syntheyes 2024"
+        rez_package: syntheyes_software-2024
+        command: syntheyes
+
+  - name: "Mari 7.0v1"
+    department: "Texturing"
+    icon: icons\dcc\mari.png
+    environment:
+      - name: "Mari 7.0v1 Non-Commercial" 
+        rez_package: mari_software-7.0.1
+        command: Mari7.0v1 --nc -platform windows:nowmpointer
+      - name: "Mari 7.0v1"
+        rez_package: mari_software-7.0.1
+        command: Mari7.0v1 -platform windows:nowmpointer
+
+  - name: "Adobe Substance 3D Painter 11.0.1"
+    department: "Texturing"
+    icon: icons\dcc\painter.png
+    environment:
+      - name: "Adobe Substance 3D Painter 11.0.1"
+        rez_package: substancePainter_software-11.0.1
+        command: 'Adobe Substance 3D Painter'
