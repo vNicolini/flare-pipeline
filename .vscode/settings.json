@@ -1,0 +1,8 @@
+{
+    "yaml.schemas": {
+        "c:\\Users\\Valentin Nicolini\\.vscode\\extensions\\continue.continue-1.0.7-win32-x64\\config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ],
+        "https://json.schemastore.org/yamllint.json": "file:///f%3A/Pipeline/dev/flare-pipeline/flareconfigmaker/template.yaml"
+    }
+}
