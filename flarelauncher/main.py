@@ -1,6 +1,7 @@
+import os
 import sys
 import subprocess
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QGroupBox, QScrollArea, QMenu, QGridLayout, QVBoxLayout, QSystemTrayIcon
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QGroupBox, QScrollArea, QMenu, QGridLayout, QVBoxLayout, QSystemTrayIcon, QHBoxLayout, QDialog, QTextEdit, QLabel, QPushButton, QFileDialog
 from PyQt6.QtGui import QIcon, QAction
 from PyQt6.QtCore import Qt, QSize
 import yaml
@@ -34,6 +35,12 @@ class MainWindow(QMainWindow):
         scroll_area.setWidget(central_widget)
         scroll_area.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.setCentralWidget(scroll_area)
+
+        # Add a button to the top-right corner
+        self.add_config_button()
+
+        # Add a button to change the config file and refresh the UI
+        self.add_config_buttons()
 
         # Load configuration from YAML file
         self.load_config()
@@ -183,12 +190,100 @@ class MainWindow(QMainWindow):
             if self.isHidden() or not self.isVisible():
                 self.showNormal()
 
-    def resizeEvent(self, event):
-        # Calculate the width of a single button
-        button_width = self.layout.itemAt(0).widget().layout().itemAt(0).widget().sizeHint().width()
-        # Set the window width to accommodate exactly 2 buttons
-        self.setFixedWidth(button_width * 3 + 50)  # Add some padding
-        super().resizeEvent(event)
+    def add_config_button(self):
+        config_button = QPushButton("Show Config")
+        config_button.clicked.connect(self.show_config_window)
+
+        # Create a layout for the top-right corner
+        top_layout = QHBoxLayout()
+        top_layout.addStretch()
+        top_layout.addWidget(config_button)
+
+        # Add the top layout to the main layout
+        self.layout.insertLayout(0, top_layout)
+
+    def show_config_window(self):
+        config_dialog = QDialog(self)
+        config_dialog.setWindowTitle("Configuration File")
+
+        # Get the absolute path of the config file
+        config_path = os.path.abspath('../flare-launcher-config.yaml')
+
+        # Create a text edit to display the config file contents
+        text_edit = QTextEdit()
+        text_edit.setReadOnly(True)
+
+        # Load the config file contents
+        with open(config_path, 'r') as file:
+            config_contents = file.read()
+            text_edit.setPlainText(config_contents)
+
+        # Create a label to display the config file path
+        path_label = QLabel(f"Config File Path: {config_path}")
+
+        # Set the layout for the dialog
+        layout = QVBoxLayout()
+        layout.addWidget(path_label)  # Add the path label at the top
+        layout.addWidget(text_edit)
+        config_dialog.setLayout(layout)
+
+        # Show the dialog
+        config_dialog.exec()
+
+    def add_config_buttons(self):
+        # Create a layout for the top-right corner
+        top_layout = QHBoxLayout()
+        top_layout.addStretch()
+
+        # Add the "Show Config" button
+        config_button = QPushButton("Show Config")
+        config_button.clicked.connect(self.show_config_window)
+        top_layout.addWidget(config_button)
+
+        # Add the "Change Config" button
+        change_config_button = QPushButton("Change Config")
+        change_config_button.clicked.connect(self.change_config_file)
+        top_layout.addWidget(change_config_button)
+
+        # Add the "Refresh" button
+        refresh_button = QPushButton("Refresh")
+        refresh_button.clicked.connect(self.refresh_ui)
+        top_layout.addWidget(refresh_button)
+
+        # Add the top layout to the main layout
+        self.layout.insertLayout(0, top_layout)
+
+    def change_config_file(self):
+        # Open a file dialog to select a new config file
+        options = QFileDialog.Options()
+        options |= QFileDialog.ReadOnly
+        file_name, _ = QFileDialog.getOpenFileName(self, "Select Configuration File", "", "YAML Files (*.yaml);;All Files (*)", options=options)
+
+        if file_name:
+            # Update the config file path
+            self.config_file_path = file_name
+            # Reload the UI with the new config file
+            self.refresh_ui()
+
+    def refresh_ui(self):
+        # Clear the existing layout
+        for i in reversed(range(self.layout.count())):
+            widget = self.layout.itemAt(i).widget()
+            if widget is not None:
+                widget.deleteLater()
+
+        # Reload the configuration
+        self.load_config()
+
+        # Add categories and buttons based on the new configuration
+        self.add_categories_from_config()
+
+        # Add the config buttons again
+        self.add_config_buttons()
+
+    def load_config(self):
+        with open(self.config_file_path, 'r') as file:
+            self.config = yaml.safe_load(file)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
