@@ -292,7 +292,6 @@ class MainWindow(QMainWindow):
         # Add categories and buttons based on the new configuration
         self.add_categories_from_config()
 
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
