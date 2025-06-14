@@ -8,10 +8,10 @@ import yaml
 
 class MainWindow(QMainWindow):
     APP_TITLE = "Flare DCC Launcher"
-    ICON_PATH = "icons/flare-launcher.png"
+    ICON_PATH = os.path.join(os.path.dirname(__file__), "icons", "flare-launcher.png")  # Ensure this path is correct
     TRAY_TOOLTIP = "Flare Launcher"
-    CONFIG_DIR = "../"  # Directory containing YAML configuration files
-    DEFAULT_CONFIG = "../flare-launcher-config.yaml"  # Default configuration file
+    CONFIG_DIR = os.path.join(os.path.dirname(__file__), "..")  # Directory containing YAML configuration files
+    DEFAULT_CONFIG = os.path.join(CONFIG_DIR, "flare-launcher-config.yaml")  # Default configuration file
 
     def __init__(self):
         super().__init__()
@@ -25,7 +25,7 @@ class MainWindow(QMainWindow):
         # Set window icon
         app_icon = QIcon(self.ICON_PATH)
         self.setWindowIcon(app_icon)
-
+                
         # Set dark theme using stylesheet
         self.set_style_sheet()
 
@@ -280,7 +280,6 @@ class MainWindow(QMainWindow):
 
         # Add categories and buttons based on the new configuration
         self.add_categories_from_config()
-
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
