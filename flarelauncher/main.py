@@ -14,6 +14,9 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
+        # Initialize the config file path
+        self.config_file_path = os.path.abspath('../flare-launcher-config.yaml')
+
         # Set window Title
         self.setWindowTitle(self.APP_TITLE)
 
@@ -28,7 +31,7 @@ class MainWindow(QMainWindow):
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         self.layout = QVBoxLayout(central_widget)
-        
+
         # Wrap the central widget in a scroll area
         scroll_area = QScrollArea()
         scroll_area.setWidgetResizable(True)
@@ -36,10 +39,7 @@ class MainWindow(QMainWindow):
         scroll_area.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.setCentralWidget(scroll_area)
 
-        # Add a button to the top-right corner
-        self.add_config_button()
-
-        # Add a button to change the config file and refresh the UI
+        # Add buttons to the top-right corner
         self.add_config_buttons()
 
         # Load configuration from YAML file
@@ -58,7 +58,7 @@ class MainWindow(QMainWindow):
         self.hide()
 
     def load_config(self):
-        with open('../flare-launcher-config.yaml', 'r') as file:
+        with open(self.config_file_path, 'r') as file:
             self.config = yaml.safe_load(file)
 
     def set_style_sheet(self):
@@ -190,24 +190,12 @@ class MainWindow(QMainWindow):
             if self.isHidden() or not self.isVisible():
                 self.showNormal()
 
-    def add_config_button(self):
-        config_button = QPushButton("Show Config")
-        config_button.clicked.connect(self.show_config_window)
-
-        # Create a layout for the top-right corner
-        top_layout = QHBoxLayout()
-        top_layout.addStretch()
-        top_layout.addWidget(config_button)
-
-        # Add the top layout to the main layout
-        self.layout.insertLayout(0, top_layout)
-
     def show_config_window(self):
         config_dialog = QDialog(self)
         config_dialog.setWindowTitle("Configuration File")
 
         # Get the absolute path of the config file
-        config_path = os.path.abspath('../flare-launcher-config.yaml')
+        config_path = os.path.abspath(self.config_file_path)
 
         # Create a text edit to display the config file contents
         text_edit = QTextEdit()
@@ -255,8 +243,7 @@ class MainWindow(QMainWindow):
 
     def change_config_file(self):
         # Open a file dialog to select a new config file
-        options = QFileDialog.Options()
-        options |= QFileDialog.ReadOnly
+        options = QFileDialog.Option.ReadOnly
         file_name, _ = QFileDialog.getOpenFileName(self, "Select Configuration File", "", "YAML Files (*.yaml);;All Files (*)", options=options)
 
         if file_name:
@@ -277,13 +264,6 @@ class MainWindow(QMainWindow):
 
         # Add categories and buttons based on the new configuration
         self.add_categories_from_config()
-
-        # Add the config buttons again
-        self.add_config_buttons()
-
-    def load_config(self):
-        with open(self.config_file_path, 'r') as file:
-            self.config = yaml.safe_load(file)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
