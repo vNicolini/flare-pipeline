@@ -94,6 +94,14 @@ applications:
       - name: "Gaffer 1.5.15.0 + Arnold Core 7.4.3.0 + Renderman 26.3"
         rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.3.0 renderman_gaffer_plugin-26.3
         command: gaffer
+
+  - name: "Guerilla Render 2.4.4"
+    department: "Assembly / LookDev / Lighting"
+    icon: icons\dcc\guerilla.ico
+    environment:
+      - name: "Guerilla Render 2.4.4"
+        rez_package: guerilla_software-2.4.4
+        command: guerilla
   
       - name: "Gaffer 1.5.16.1 + Renderman 26.3"
         rez_package: gaffer_software-1.5.16.1 renderman_gaffer_plugin-26.3
@@ -286,21 +294,3 @@ applications:
         rez_package: syntheyes_software-2024
         command: syntheyes
 
-  - name: "Mari 7.0v1"
-    department: "Texturing"
-    icon: icons\dcc\mari.png
-    environment:
-      - name: "Mari 7.0v1 Non-Commercial" 
-        rez_package: mari_software-7.0.1
-        command: Mari7.0v1 --nc -platform windows:nowmpointer
-      - name: "Mari 7.0v1"
-        rez_package: mari_software-7.0.1
-        command: Mari7.0v1 -platform windows:nowmpointer
-
-  - name: "Adobe Substance 3D Painter 11.0.1"
-    department: "Texturing"
-    icon: icons\dcc\painter.png
-    environment:
-      - name: "Adobe Substance 3D Painter 11.0.1"
-        rez_package: substancePainter_software-11.0.1
-        command: 'Adobe Substance 3D Painter'
