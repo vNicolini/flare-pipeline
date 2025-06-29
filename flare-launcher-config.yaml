@@ -8,7 +8,7 @@ applications:
         rez_package: maya_software-2025 arnold_maya_plugin-5.5.2.0 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+
         command: maya
       - name: "Maya 2025 + Renderman 26.3"
-        rez_package: maya_software-2025 renderman_maya_plugin-26.3 maya_custom_plugin-1.0 bifrost_maya_plugin2.14+
+        rez_package: maya_software-2025 renderman_maya_plugin-26.3 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+
         command: maya
 
   - name: "3dsmax 2023"
