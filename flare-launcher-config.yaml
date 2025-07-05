@@ -266,10 +266,10 @@ applications:
         rez_package: nuke_software-15.2.1
         command: nuke15.2 --nc
       - name: "NukeStudio 15.2v1 Non-Commercial"
-        rez_package: nuke_software-15.2.1
+        rez_package: nuke_software-15.2.1 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_stamps_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
         command: nuke15.2 --studio --nc
       - name: "NukeX 15.2v1 Non-Commercial"
-        rez_package: nuke_software-15.2.1
+        rez_package: nuke_software-15.2.1 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_stamps_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
         command: nuke15.2 --nukex --nc
   
   - name: "Hiero 15.2v1"
