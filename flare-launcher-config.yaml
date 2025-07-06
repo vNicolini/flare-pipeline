@@ -38,16 +38,16 @@ applications:
         rez_package: houdini_software-20.5.445 axiom_plugin-3.3.073
         command: houdinifx
 
-  - name: "Mari 7.0v1"
+  - name: "Mari 7.1v2"
     department: "Texturing"
     icon: icons\dcc\mari.png
     environment:
-      - name: "Mari 7.0v1 Non-Commercial" 
-        rez_package: mari_software-7.0.1
-        command: Mari7.0v1 --nc -platform windows:nowmpointer
-      - name: "Mari 7.0v1"
-        rez_package: mari_software-7.0.1
-        command: Mari7.0v1 -platform windows:nowmpointer
+      - name: "Mari 7.1v2 Non-Commercial" 
+        rez_package: mari_software-7.1.2
+        command: Mari7.1v2 --nc -platform windows:nowmpointer
+      - name: "Mari 7.1v2"
+        rez_package: mari_software-7.1.2
+        command: Mari7.1v2 -platform windows:nowmpointer
 
   - name: "Adobe Substance 3D Painter 11.0.1"
     department: "Texturing"
