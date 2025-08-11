@@ -27,7 +27,7 @@ applications:
        rez_package: 3dsmax_software-2025
        command: 3dsmax
 
-  - name: "Houdini 20.5"
+  - name: "Houdini 20.5.445"
     department: "CFX / FX / Environment"
     icon: icons\dcc\houdini.ico
     environment:
@@ -37,8 +37,22 @@ applications:
       - name: "Houdini Core 20.5.445 + Renderman 26.3"
         rez_package: houdini_software-20.5.445 renderman_houdini_plugin-26.3
         command: houdinicore
-      - name: "Houdini FX 20.5.445"
-        rez_package: houdini_software-20.5.445 axiom_plugin-3.3.073
+      - name: "Houdini FX 20.5.445 + Renderman 26.3"
+        rez_package: houdini_software-20.5.445 axiom_plugin-3.3.073 renderman_houdini_plugin-26.3
+        command: houdinifx
+
+  - name: "Houdini 20.5.654"
+    department: "CFX / FX / Environment"
+    icon: icons\dcc\houdini.ico
+    environment:
+      - name: "Houdini Core 20.5.654"
+        rez_package: houdini_software-20.5.654 
+        command: houdinicore
+      - name: "Houdini Core 20.5.654 + HtoA 6.4.3.0"
+        rez_package: houdini_software-20.5.654 arnold_houdini_plugin-6.4.3.0
+        command: houdinicore
+      - name: "Houdini FX 20.5.654 + HtoA 6.4.3.0"
+        rez_package: houdini_software-20.5.654 axiom_plugin-3.3.079 arnold_houdini_plugin-6.4.3.0
         command: houdinifx
 
   - name: "Mari 7.1v2"
