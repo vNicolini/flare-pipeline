@@ -27,7 +27,7 @@ applications:
        rez_package: 3dsmax_software-2025
        command: 3dsmax
 
-  - name: "Houdini 20.5.445"
+  - name: "Houdini 20.5.445 (Renderman)"
     department: "CFX / FX / Environment"
     icon: icons\dcc\houdini.ico
     environment:
@@ -41,7 +41,7 @@ applications:
         rez_package: houdini_software-20.5.445 axiom_plugin-3.3.073 renderman_houdini_plugin-26.3
         command: houdinifx
 
-  - name: "Houdini 20.5.654"
+  - name: "Houdini 20.5.654 (HtoA)"
     department: "CFX / FX / Environment"
     icon: icons\dcc\houdini.ico
     environment:
