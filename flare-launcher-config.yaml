@@ -32,7 +32,10 @@ applications:
     icon: icons\dcc\houdini.ico
     environment:
       - name: "Houdini Core 20.5.445"
-        rez_package: houdini_software-20.5.445
+        rez_package: houdini_software-20.5.445 
+        command: houdinicore
+      - name: "Houdini Core 20.5.445 + Renderman 26.3"
+        rez_package: houdini_software-20.5.445 renderman_houdini_plugin-26.3
         command: houdinicore
       - name: "Houdini FX 20.5.445"
         rez_package: houdini_software-20.5.445 axiom_plugin-3.3.073
