@@ -7,6 +7,9 @@ applications:
       - name: "Maya 2025 + MtoA 5.5.4.0 (Core 7.4.3.0)"
         rez_package: maya_software-2025 arnold_maya_plugin-5.5.4.0 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0
         command: maya
+      - name: "Maya 2025 + MtoA 5.5.4.0 (Core 7.4.3.0) - Maya22 OCIO config"
+        rez_package: maya_software-2025 arnold_maya_plugin-5.5.4.0 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0 ocio_plugin-1.0.flare.1.0
+        command: maya
       - name: "Maya 2025 + Renderman 26.3"
         rez_package: maya_software-2025 renderman_maya_plugin-26.3 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0
         command: maya
@@ -94,6 +97,9 @@ applications:
         command: gaffer
       - name: "Gaffer 1.5.16.1 + Arnold 7.4.3.0"
         rez_package: gaffer_software-1.5.16.1 arnold_core_plugin-7.4.3.0
+        command: gaffer
+      - name: "Gaffer 1.5.16.1 + Arnold 7.4.3.0 - Maya22 OCIO config"
+        rez_package: gaffer_software-1.5.16.1 arnold_core_plugin-7.4.3.0 ocio_plugin-1.0.flare.1.0
         command: gaffer
       - name: "Gaffer 1.5.16.1 + Arnold Core 7.4.3.0 + Renderman 26.3"
         rez_package: gaffer_software-1.5.16.1 arnold_core_plugin-7.4.3.0 renderman_gaffer_plugin-26.3
