@@ -88,6 +88,9 @@ applications:
       - name: "Gaffer 1.5.15.0 + Arnold 7.4.3.0"
         rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.3.0 gafferTools_gaffer_plugin-1.0
         command: gaffer
+      - name: "Gaffer 1.5.15.0 + Arnold 7.4.3.0 - Maya22 OCIO config"
+        rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.3.0 gafferTools_gaffer_plugin-1.0 ocio_plugin-1.0.flare.1.0
+        command: gaffer
       - name: "Gaffer 1.5.15.0 + Arnold Core 7.4.3.0 + Renderman 26.3"
         rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.3.0 renderman_gaffer_plugin-26.3
         command: gaffer
