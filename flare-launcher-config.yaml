@@ -8,14 +8,6 @@ applications:
         rez_package: maya_software-2025 arnold_maya_plugin-5.5.2.0 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0
         command: maya
       - name: "Maya 2025 + Renderman 26.3"
-        rez_package: maya_software-2025 renderman_maya_plugin-26.3 maya_custom_plugin-1.0
-      - name: "Maya 2025 + MtoA 5.5.4.0 (Core 7.4.3.0)"
-        rez_package: maya_software-2025 arnold_maya_plugin-5.5.4.0 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0
-        command: maya
-      - name: "Maya 2025 + MtoA 5.5.4.0 (Core 7.4.3.0) - Maya22 OCIO config"
-        rez_package: maya_software-2025 arnold_maya_plugin-5.5.4.0 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0 ocio_plugin-1.0.flare.1.0
-        command: maya
-      - name: "Maya 2025 + Renderman 26.3"
         rez_package: maya_software-2025 renderman_maya_plugin-26.3 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0
         command: maya
 
@@ -35,32 +27,15 @@ applications:
        rez_package: 3dsmax_software-2025
        command: 3dsmax
 
-  - name: "Houdini 20.5.445"
+  - name: "Houdini 20.5"
     department: "CFX / FX / Environment"
     icon: icons\dcc\houdini.ico
     environment:
       - name: "Houdini Core 20.5.445"
-        rez_package: houdini_software-20.5.445 
+        rez_package: houdini_software-20.5.445
         command: houdinicore
-      - name: "Houdini Core 20.5.445 + Renderman 26.3"
-        rez_package: houdini_software-20.5.445 renderman_houdini_plugin-26.3
-        command: houdinicore
-      - name: "Houdini FX 20.5.445 + Renderman 26.3"
-        rez_package: houdini_software-20.5.445 axiom_plugin-3.3.073 renderman_houdini_plugin-26.3
-        command: houdinifx
-
-  - name: "Houdini 20.5.654"
-    department: "CFX / FX / Environment"
-    icon: icons\dcc\houdini.ico
-    environment:
-      - name: "Houdini Core 20.5.654"
-        rez_package: houdini_software-20.5.654 
-        command: houdinicore
-      - name: "Houdini Core 20.5.654 + HtoA 6.4.3.0"
-        rez_package: houdini_software-20.5.654 arnold_houdini_plugin-6.4.3.0
-        command: houdinicore
-      - name: "Houdini FX 20.5.654 + HtoA 6.4.3.0"
-        rez_package: houdini_software-20.5.654 axiom_plugin-3.3.079 arnold_houdini_plugin-6.4.3.0
+      - name: "Houdini FX 20.5.445"
+        rez_package: houdini_software-20.5.445 axiom_plugin-3.3.073
         command: houdinifx
 
   - name: "Mari 7.1v2"
@@ -86,39 +61,24 @@ applications:
     department: "Assembly / LookDev / Lighting"
     icon: icons\dcc\gaffer.png
     environment:
+      - name: "Gaffer 1.5.14.0 + Renderman 26.3"
+        rez_package: gaffer_software-1.5.14.0 renderman_gaffer_plugin-26.3
+        command: gaffer
+      - name: "Gaffer 1.5.14.0 + Arnold 7.2.0"
+        rez_package: gaffer_software-1.5.14.0 arnold_core_plugin-7.4.2.0
+        command: gaffer
+      - name: "Gaffer 1.5.14.0 + Arnold Core 7.4.2.0 + Renderman 26.3"
+        rez_package: gaffer_software-1.5.14.0 arnold_core_plugin-7.4.2.0 renderman_gaffer_plugin-26.3
+        command: gaffer
 
       - name: "Gaffer 1.5.15.0 + Renderman 26.3"
         rez_package: gaffer_software-1.5.15.0 renderman_gaffer_plugin-26.3
         command: gaffer
-      - name: "Gaffer 1.5.15.0 + Arnold 7.4.3.0"
-        rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.3.0 gafferTools_gaffer_plugin-1.0
+      - name: "Gaffer 1.5.15.0 + Arnold 7.2.0"
+        rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.2.0 gafferTools_gaffer_plugin-1.0
         command: gaffer
-      - name: "Gaffer 1.5.15.0 + Arnold 7.4.3.0 - Maya22 OCIO config"
-        rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.3.0 gafferTools_gaffer_plugin-1.0 ocio_plugin-1.0.flare.1.0
-        command: gaffer
-      - name: "Gaffer 1.5.15.0 + Arnold Core 7.4.3.0 + Renderman 26.3"
-        rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.3.0 renderman_gaffer_plugin-26.3
-        command: gaffer
-
-  - name: "Guerilla Render 2.4.4"
-    department: "Assembly / LookDev / Lighting"
-    icon: icons\dcc\guerilla.ico
-    environment:
-      - name: "Guerilla Render 2.4.4"
-        rez_package: guerilla_software-2.4.4
-        command: guerilla
-  
-      - name: "Gaffer 1.5.16.1 + Renderman 26.3"
-        rez_package: gaffer_software-1.5.16.1 renderman_gaffer_plugin-26.3
-        command: gaffer
-      - name: "Gaffer 1.5.16.1 + Arnold 7.4.3.0"
-        rez_package: gaffer_software-1.5.16.1 arnold_core_plugin-7.4.3.0
-        command: gaffer
-      - name: "Gaffer 1.5.16.1 + Arnold 7.4.3.0 - Maya22 OCIO config"
-        rez_package: gaffer_software-1.5.16.1 arnold_core_plugin-7.4.3.0 ocio_plugin-1.0.flare.1.0
-        command: gaffer
-      - name: "Gaffer 1.5.16.1 + Arnold Core 7.4.3.0 + Renderman 26.3"
-        rez_package: gaffer_software-1.5.16.1 arnold_core_plugin-7.4.3.0 renderman_gaffer_plugin-26.3
+      - name: "Gaffer 1.5.15.0 + Arnold Core 7.4.2.0 + Renderman 26.3"
+        rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.2.0 renderman_gaffer_plugin-26.3
         command: gaffer
 
   - name: "Guerilla Render 2.4.4"
@@ -135,135 +95,6 @@ applications:
     environment:
       - name: "Nuke 15.2v1 Non-Commercial"
         rez_package: nuke_software-15.2.1 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_stamps_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
-        command: nuke15.2 --nc
-      - name: "NukeStudio 15.2v1 Non-Commercial"
-        rez_package: nuke_software-15.2.1 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_stamps_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
-        command: nuke15.2 --studio --nc
-      - name: "NukeX 15.2v1 Non-Commercial"
-        rez_package: nuke_software-15.2.1 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_stamps_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
-        command: nuke15.2 --nukex --nc
-  
-  - name: "Hiero 15.2v1"
-    department: "Compositing / Editing / Review"
-    icon: icons\dcc\hiero.png
-    environment:
-      - name: "Hiero 15.2v1"
-        rez_package: nuke_software-15.2.1
-        command: nuke15.2 --hiero
-      - name: "Hiero Player 15.2v1"
-        rez_package: nuke_software-15.2.1
-        command: nuke15.2 --player
-  
-  - name: "OpenRV 1.0"
-    department: "Compositing / Editing / Review"
-    icon: icons\dcc\openrv.png
-    environment:
-      - name: "OpenRV 1.0"
-        rez_package: openrv_software
-        command: rv.exe
-
-  - name: "Syntheyes 2024"
-    department: "Compositing / Editing / Review"
-    icon: icons\dcc\syntheyes.png
-    environment:
-      - name: "Syntheyes 2024"
-        rez_package: syntheyes_software-2024
-        command: syntheyes
-
-applications:
-
-  - name: "Maya 2025"
-    department: "Modeling / Rigging / Animation / Layout"
-    icon: icons\dcc\maya.png
-    department: "Assembly / LookDev / Lighting"
-
-  - name: "Maya 2025 + MtoA 5.5.2.0 (Core 7.4.2.0)"
-    rez_package: maya_software-2025 arnold_maya_plugin-5.5.2.0
-    description: "Autodesk Maya 2025 + MtoA 5.5.2.0 (Core 7.4.2.0)"
-    command: maya
-    icon: icons\dcc\maya.png
-    department: "Assembly / LookDev / Lighting"
-
-          ###### 3dsmax ######
-
-  - name: "3dsmax 2023"
-    department: "Modeling / Rigging / Animation / Layout"
-    icon: icons\dcc\3dsmax.ico
-    environment:
-      - name: "3dsmax 2023"
-        rez_package: 3dsmax_software-2023
-        command: 3dsmax
-  
-  - name: "3dsmax 2025"
-    department: "Modeling / Rigging / Animation / Layout"
-
-          ###### Houdini ######
-
-  - name: "Houdini Core 20.5.445"
-    rez_package: houdini_software-20.5.445
-    description: "Houdini Core 20.5.445"
-    command: houdinicore
-    icon: icons\dcc\houdini.ico
-    department: "CFX / FX / Environment"
-    icon: icons\dcc\houdini.ico
-    department: "CFX / FX / Environment"
-
-          ###### Gaffer ######
-
-  - name: "Gaffer 1.5.14.0 + Renderman 26.3"
-    rez_package: gaffer_software-1.5.14.0 renderman_gaffer_plugin-26.3
-    description: "Gaffer 1.5.14.0 + Renderman 26.3"
-    command: gaffer
-    icon: icons\dcc\gaffer.png
-    department: "Assembly / LookDev / Lighting"
-
-  - name: "Gaffer 1.5.15.0 + Renderman 26.3"
-    rez_package: gaffer_software-1.5.15.0 renderman_gaffer_plugin-26.3
-    description: "Gaffer 1.5.15.0 + Renderman 26.3"
-    command: gaffer
-    icon: icons\dcc\gaffer.png
-    department: "Assembly / LookDev / Lighting"
-
-  - name: "Gaffer 1.5.14.0 + Arnold Core 7.4.2.0"
-    rez_package: gaffer_software-1.5.14.0 arnold_core_plugin-7.4.2.0
-    description: "Gaffer 1.5.14.0 + Arnold Core 7.4.2.0"
-    command: gaffer
-    icon: icons\dcc\gaffer.png
-    department: "Assembly / LookDev / Lighting"
-
-  - name: "Gaffer 1.5.15.0 + Arnold Core 7.4.2.0"
-    rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.2.0
-    description: "Gaffer 1.5.15.0 + Arnold Core 7.4.2.0"
-    command: gaffer
-    icon: icons\dcc\gaffer.png
-    department: "Assembly / LookDev / Lighting"
-
-  - name: "Gaffer 1.5.14.0 + Arnold Core 7.4.2.0 + Renderman 26.3"
-    rez_package: gaffer_software-1.5.14.0 arnold_core_plugin-7.4.2.0 renderman_gaffer_plugin-26.3
-    description: "Gaffer 1.5.14.0 + Arnold Core 7.4.2.0 + Renderman 26.3"
-    command: gaffer
-    icon: icons\dcc\gaffer.png
-    department: "Assembly / LookDev / Lighting"
-
-  - name: "Gaffer 1.5.15.0 + Arnold Core 7.4.2.0 + Renderman 26.3"
-    rez_package: gaffer_software-1.5.15.0 arnold_core_plugin-7.4.2.0 renderman_gaffer_plugin-26.3
-    description: "Gaffer 1.5.15.0 + Arnold Core 7.4.2.0 + Renderman 26.3"
-    command: gaffer
-    icon: icons\dcc\gaffer.png
-    department: "Assembly / LookDev / Lighting"
-
-          ###### Nuke ######
-
-  - name: "Nuke 15.2v1 NC"
-    rez_package: nuke_software-15.2.1
-    description: "Nuke 15.2v1 Non-Commercial"
-    command: nuke15.2 --nc
-    icon: icons\dcc\nuke.png 
-    department: "Compositing / Editing / Review"
-    icon: icons\dcc\nuke.png
-    environment:
-      - name: "Nuke 15.2v1 Non-Commercial"
-        rez_package: nuke_software-15.2.1
         command: nuke15.2 --nc
       - name: "NukeStudio 15.2v1 Non-Commercial"
         rez_package: nuke_software-15.2.1 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_stamps_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
