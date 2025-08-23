@@ -57,6 +57,9 @@ applications:
       - name: "Houdini FX 20.5.654 + HtoA 6.4.3.0"
         rez_package: houdini_software-20.5.654 axiom_plugin-3.3.079 arnold_houdini_plugin-6.4.3.0
         command: houdinifx
+      - name: "Houdini FX 20.5.654 DJA"
+        rez_package: houdini_software-20.5.654 axiom_plugin-3.3.079 arnold_houdini_plugin-6.4.3.0 dja_filmFX_houdini_plugin
+        command: houdinifx
 
   - name: "Mari 7.1v2"
     department: "Texturing"
