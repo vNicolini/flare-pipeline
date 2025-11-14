@@ -13,6 +13,9 @@ applications:
       - name: "Maya 2025 + Renderman 26.3"
         rez_package: maya_software-2025 renderman_maya_plugin-26.3 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0
         command: maya
+      - name: "Maya 2025 + Renderman 27.0"
+        rez_package: maya_software-2025 renderman_maya_plugin-27.0 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0
+        command: maya
 
   - name: "3dsmax 2023"
     department: "Modeling / Rigging / Animation / Layout"
