@@ -22,7 +22,7 @@ applications:
     icon: icons\dcc\3dsmax.ico
     environment:
       - name: "3dsmax 2023"
-        rez_package: 3dsmax_software-2023 tyflow_plugin
+        rez_package: 3dsmax_software-2023 tyflow_plugin vray_3dsmax_plugin
         command: 3dsmax
   
   - name: "3dsmax 2025"
@@ -30,7 +30,7 @@ applications:
     icon: icons\dcc\3dsmax.ico
     environment:
      - name: "3dsmax 2025"
-       rez_package: 3dsmax_software-2025 tyflow_plugin
+       rez_package: 3dsmax_software-2025 tyflow_plugin vray_3dsmax_plugin
        command: 3dsmax
 
   - name: "Houdini 20.5.445"
