@@ -51,7 +51,7 @@ class MainWindow(QMainWindow):
         self.add_categories_from_config()
 
         # Set default size of the main window
-        self.resize(450, 650)
+        self.resize(450, 750)
 
         # Create system tray icon
         self.create_tray_icon()
