@@ -154,6 +154,14 @@ applications:
       - name: "OpenRV 1.0"
         rez_package: openrv_software
         command: rv.exe
+  
+  - name: "xSTUDIO 1.1.0"
+    department: "Compositing / Editing / Review"
+    icon: icons\dcc\xstudio.svg
+    environment:
+      - name: "xSTUDIO 1.1.0"
+        rez_package: xstudio_software
+        command: xstudio.exe
 
   - name: "Syntheyes 2024"
     department: "Compositing / Editing / Review"
