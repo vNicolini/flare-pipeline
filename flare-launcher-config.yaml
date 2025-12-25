@@ -107,7 +107,7 @@ applications:
       - name: "Gaffer 1.6.7.0 + Renderman 27.0"
         rez_package: gaffer_software-1.6.7.0 renderman_gaffer_plugin-27.0
         command: gaffer
-      - name: "Gaffer 1.6.7.0 + Arnold Core 7.4.3.0 + Renderman 27.1"
+      - name: "Gaffer 1.6.7.0 + Arnold Core 7.4.3.0 + Renderman 27.0"
         rez_package: gaffer_software-1.6.7.0 arnold_core_plugin-7.4.3.0 renderman_gaffer_plugin-27.0
         command: gaffer
 
