@@ -95,16 +95,16 @@ applications:
     icon: icons\dcc\houdini.ico
     environment:
       - name: "Houdini Core 21.0.559"
-        rez_package: houdini_software-21.0.559 
+        rez_package: houdini_software-21.0.559 houdini_labs_plugin-21
         command: houdinicore
       - name: "Houdini Core 21.0.559 + Renderman 27.1"
-        rez_package: houdini_software-21.0.559 renderman_houdini_plugin-27.1
+        rez_package: houdini_software-21.0.559 renderman_houdini_plugin-27.1 houdini_labs_plugin-21
         command: houdinicore
       - name: "Houdini FX 21.0.559 + Renderman 27.1"
-        rez_package: houdini_software-21.0.559 axiom_plugin-3.3.086 renderman_houdini_plugin-27.1
+        rez_package: houdini_software-21.0.559 axiom_plugin-3.3.086 renderman_houdini_plugin-27.1 houdini_labs_plugin-21
         command: houdinifx
       - name: "Houdini FX 21.0.559 Workshops (Renderman)"
-        rez_package: houdini_software-21.0.559 axiom_plugin-3.3.086 renderman_houdini_plugin-27.1 dja_filmFX_houdini_plugin rebelway_houdini_plugin
+        rez_package: houdini_software-21.0.559 axiom_plugin-3.3.086 renderman_houdini_plugin-27.1 dja_filmFX_houdini_plugin rebelway_houdini_plugin houdini_labs_plugin-21
         command: houdinifx
 
   - name: "Mari 7.1v2"
