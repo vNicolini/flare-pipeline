@@ -162,28 +162,28 @@ applications:
         rez_package: guerilla_software-2.4.4
         command: guerilla
   
-  - name: "Nuke 16.0v6"
+  - name: "Nuke 16.1v1"
     department: "Compositing / Editing / Review"
     icon: icons\dcc\nuke.png
     environment:
-      - name: "Nuke 16.0v6 Non-Commercial"
+      - name: "Nuke 16.1v1 Non-Commercial"
         rez_package: nuke_software-16.0.6 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
         command: nuke16.0 --nc
-      - name: "NukeStudio 16.0v6 Non-Commercial"
+      - name: "NukeStudio 16.1v1 Non-Commercial"
         rez_package: nuke_software-16.0.6 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
         command: nuke16.0 --studio --nc
-      - name: "NukeX 16.0v6 Non-Commercial"
+      - name: "NukeX 16.1v1 Non-Commercial"
         rez_package: nuke_software-16.0.6 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
         command: nuke16.0 --nukex --nc
   
-  - name: "Hiero 16.0v6"
+  - name: "Hiero 16.1v1"
     department: "Compositing / Editing / Review"
     icon: icons\dcc\hiero.png
     environment:
-      - name: "Hiero 16.0v6"
+      - name: "Hiero 16.1v1"
         rez_package: nuke_software-16.0.6
         command: nuke16.0 --hiero
-      - name: "Hiero Player 16.0v6"
+      - name: "Hiero Player 16.1v1"
         rez_package: nuke_software-16.0.6
         command: nuke16.0 --player
   
