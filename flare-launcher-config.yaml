@@ -167,13 +167,13 @@ applications:
     icon: icons\dcc\nuke.png
     environment:
       - name: "Nuke 16.1v1 Non-Commercial"
-        rez_package: nuke_software-16.0.6 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
+        rez_package: nuke_software-16.1.1 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
         command: nuke16.1 --nc
       - name: "NukeStudio 16.1v1 Non-Commercial"
-        rez_package: nuke_software-16.0.6 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
+        rez_package: nuke_software-16.1.1 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
         command: nuke16.1 --studio --nc
       - name: "NukeX 16.1v1 Non-Commercial"
-        rez_package: nuke_software-16.0.6 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
+        rez_package: nuke_software-16.1.1 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin
         command: nuke16.1 --nukex --nc
   
   - name: "Hiero 16.1v1"
@@ -181,10 +181,10 @@ applications:
     icon: icons\dcc\hiero.png
     environment:
       - name: "Hiero 16.1v1"
-        rez_package: nuke_software-16.0.6
+        rez_package: nuke_software-16.1.1
         command: nuke16.1 --hiero
       - name: "Hiero Player 16.1v1"
-        rez_package: nuke_software-16.0.6
+        rez_package: nuke_software-16.1.1
         command: nuke16.1 --player
   
   - name: "OpenRV 1.0"
