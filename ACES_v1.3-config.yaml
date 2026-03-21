@@ -104,6 +104,14 @@ applications:
         rez_package: houdini_software-21.0.559 axiom_plugin-3.3.086 renderman_houdini_plugin-27.1 dja_filmFX_houdini_plugin rebelway_houdini_plugin houdini_labs_plugin-21 aces_ocio-1.3.0
         command: houdinifx
 
+  - name: "Flare TX Converter"
+    department: "Texturing"
+    icon: icons\tools\tx_converter.svg
+    environment:
+      - name: "Flare TX Converter"
+        rez_package: openimageio_software-3.1.11.0 aces_ocio-1.3.0
+        command: python F:\Pipeline\dev\flare-convert\main.py
+
   - name: "Mari 7.1v2"
     department: "Texturing"
     icon: icons\dcc\mari.png

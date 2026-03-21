@@ -1,0 +1,26 @@
+<svg width="256" height="256" viewBox="0 0 680 680" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="680" height="680" rx="120" fill="#1a1b1e"/>
+  <!-- Inner card -->
+  <rect x="80" y="80" width="520" height="520" rx="80" fill="#222428"/>
+  <!-- Mip-map stack -->
+  <rect x="160" y="195" width="360" height="72" rx="10" fill="#111214"/>
+  <rect x="160" y="283" width="270" height="54" rx="10" fill="#111214"/>
+  <rect x="160" y="353" width="202" height="40" rx="10" fill="#111214"/>
+  <rect x="160" y="409" width="152" height="30" rx="10" fill="#111214"/>
+  <rect x="160" y="453" width="112" height="22" rx="10" fill="#111214"/>
+  <!-- Amber accent -->
+  <rect x="160" y="195" width="8" height="72" rx="4" fill="#e8a040"/>
+  <!-- .tx labels -->
+  <text x="200" y="247" font-family="monospace" font-size="40" font-weight="700" fill="#e8a040">.tx</text>
+  <text x="200" y="322" font-family="monospace" font-size="28" font-weight="700" fill="#7a5020">.tx</text>
+  <text x="200" y="382" font-family="monospace" font-size="20" font-weight="700" fill="#4a3010">.tx</text>
+  <!-- Converge arrow -->
+  <line x1="556" y1="210" x2="556" y2="468" stroke="#e8a040" stroke-width="3" stroke-linecap="round"/>
+  <polyline points="540,220 556,200 572,220" fill="none" stroke="#e8a040" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="540,458 556,478 572,458" fill="none" stroke="#e8a040" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Tick marks -->
+  <line x1="548" y1="280" x2="564" y2="280" stroke="#7a5020" stroke-width="2" stroke-linecap="round"/>
+  <line x1="548" y1="340" x2="564" y2="340" stroke="#4a3010" stroke-width="2" stroke-linecap="round"/>
+  <line x1="548" y1="390" x2="564" y2="390" stroke="#3a2008" stroke-width="2" stroke-linecap="round"/>
+</svg>
