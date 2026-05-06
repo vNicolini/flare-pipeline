@@ -5,10 +5,10 @@ applications:
     icon: icons\dcc\maya.png
     environment:
       - name: "Maya 2025 + MtoA 5.5.5.1 (Core 7.4.4.1)"
-        rez_package: maya_software-2025 arnold_maya_plugin-5.5.5.1 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0 deadline_maya_plugin-1.0 aces_ocio-1.3.0
+        rez_package: maya_software-2025 arnold_maya_plugin-5.5.5.1 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0 deadline_maya_plugin-1.0 aces_ocio-1.3.0 rombotools_plugin-2.0.4
         command: maya
       - name: "Maya 2025 + MtoA 5.6.1.0 (Core 7.5.1.0)"
-        rez_package: maya_software-2025 arnold_maya_plugin-5.6.1.0 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0 deadline_maya_plugin-1.0 aces_ocio-1.3.0
+        rez_package: maya_software-2025 arnold_maya_plugin-5.6.1.0 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0 deadline_maya_plugin-1.0 aces_ocio-1.3.0 rombotools_plugin-2.0.4
         command: maya
       - name: "Maya 2025 + Renderman 26.3"
         rez_package: maya_software-2025 renderman_maya_plugin-26.3 maya_custom_plugin-1.0 bifrost_maya_plugin-2.14+ usd_maya_plugin lookdevx_maya_plugin-1.6.0 deadline_maya_plugin-1.0 aces_ocio-1.3.0
@@ -55,13 +55,13 @@ applications:
         rez_package: houdini_software-20.5.654 aces_ocio-1.3.0
         command: houdinicore
       - name: "Houdini Core 20.5.654 + HtoA 6.4.3.0"
-        rez_package: houdini_software-20.5.654 arnold_houdini_plugin-6.4.3.0 aces_ocio-1.3.0
+        rez_package: houdini_software-20.5.654 arnold_houdini_plugin-6.4.3.0 aces_ocio-1.3.0 rombotools_plugin-2.0.4
         command: houdinicore
       - name: "Houdini FX 20.5.654 + HtoA 6.4.3.0"
-        rez_package: houdini_software-20.5.654 axiom_plugin-3.3.079 arnold_houdini_plugin-6.4.3.0 aces_ocio-1.3.0
+        rez_package: houdini_software-20.5.654 axiom_plugin-3.3.079 arnold_houdini_plugin-6.4.3.0 aces_ocio-1.3.0 rombotools_plugin-2.0.4
         command: houdinifx
       - name: "Houdini FX 20.5.654 Workshops"
-        rez_package: houdini_software-20.5.654 axiom_plugin-3.3.079 arnold_houdini_plugin-6.4.3.0 dja_filmFX_houdini_plugin rebelway_houdini_plugin aces_ocio-1.3.0
+        rez_package: houdini_software-20.5.654 axiom_plugin-3.3.079 arnold_houdini_plugin-6.4.3.0 dja_filmFX_houdini_plugin rebelway_houdini_plugin aces_ocio-1.3.0 rombotools_plugin-2.0.4
         command: houdinifx
   
   - name: "Houdini 20.5.684"
@@ -72,19 +72,19 @@ applications:
         rez_package: houdini_software-20.5.684 
         command: houdinicore
       - name: "Houdini Core 20.5.684 + HtoA 6.4.5.2"
-        rez_package: houdini_software-20.5.684 arnold_houdini_plugin-6.4.5.2 aces_ocio-1.3.0
+        rez_package: houdini_software-20.5.684 arnold_houdini_plugin-6.4.5.2 aces_ocio-1.3.0 rombotools_plugin-2.0.4
         command: houdinicore
       - name: "Houdini Core 20.5.684 + Renderman 27.1"
         rez_package: houdini_software-20.5.684 renderman_houdini_plugin-27.1 aces_ocio-1.3.0
         command: houdinicore
       - name: "Houdini FX 20.5.684 + HtoA 6.4.5.2"
-        rez_package: houdini_software-20.5.684 axiom_plugin-3.3.086 arnold_houdini_plugin-6.4.5.2 aces_ocio-1.3.0
+        rez_package: houdini_software-20.5.684 axiom_plugin-3.3.086 arnold_houdini_plugin-6.4.5.2 aces_ocio-1.3.0 rombotools_plugin-2.0.4
         command: houdinifx
       - name: "Houdini FX 20.5.684 + Renderman 27.1"
         rez_package: houdini_software-20.5.684 axiom_plugin-3.3.086 renderman_houdini_plugin-27.1 aces_ocio-1.3.0
         command: houdinifx
       - name: "Houdini FX 20.5.684 Workshops (Arnold)"
-        rez_package: houdini_software-20.5.684 axiom_plugin-3.3.086 arnold_houdini_plugin-6.4.5.2 dja_filmFX_houdini_plugin rebelway_houdini_plugin aces_ocio-1.3.0
+        rez_package: houdini_software-20.5.684 axiom_plugin-3.3.086 arnold_houdini_plugin-6.4.5.2 dja_filmFX_houdini_plugin rebelway_houdini_plugin aces_ocio-1.3.0 rombotools_plugin-2.0.4
         command: houdinifx
       - name: "Houdini FX 20.5.684 Workshops (Renderman)"
         rez_package: houdini_software-20.5.684 axiom_plugin-3.3.086 renderman_houdini_plugin-27.1 dja_filmFX_houdini_plugin rebelway_houdini_plugin aces_ocio-1.3.0
@@ -142,10 +142,10 @@ applications:
         rez_package: gaffer_software-1.5.16.1 renderman_gaffer_plugin-26.3 aces_ocio-1.3.0
         command: gaffer
       - name: "Gaffer 1.5.16.1 + Arnold 7.4.4.1"
-        rez_package: gaffer_software-1.5.16.1 arnold_core_plugin-7.4.4.1 gafferTools_gaffer_plugin aces_ocio-1.3.0
+        rez_package: gaffer_software-1.5.16.1 arnold_core_plugin-7.4.4.1 gafferTools_gaffer_plugin aces_ocio-1.3.0 rombotools_plugin-2.0.4
         command: gaffer
       - name: "Gaffer 1.5.16.1 + Arnold Core 7.4.4.1 + Renderman 26.3"
-        rez_package: gaffer_software-1.5.16.1 arnold_core_plugin-7.4.4.1 renderman_gaffer_plugin-26.3 gafferTools_gaffer_plugin aces_ocio-1.3.0
+        rez_package: gaffer_software-1.5.16.1 arnold_core_plugin-7.4.4.1 renderman_gaffer_plugin-26.3 gafferTools_gaffer_plugin aces_ocio-1.3.0 rombotools_plugin-2.0.4
         command: gaffer
 
   - name: "Gaffer 1.6"
@@ -153,13 +153,13 @@ applications:
     icon: icons\dcc\gaffer.png
     environment:
       - name: "Gaffer 1.6.7.0 + Arnold 7.4.4.1"
-        rez_package: gaffer_software-1.6.7.0 arnold_core_plugin-7.4.4.1 gafferTools_gaffer_plugin aces_ocio-1.3.0
+        rez_package: gaffer_software-1.6.7.0 arnold_core_plugin-7.4.4.1 gafferTools_gaffer_plugin aces_ocio-1.3.0 rombotools_plugin-2.0.4
         command: gaffer
       - name: "Gaffer 1.6.7.0 + Renderman 27.0"
         rez_package: gaffer_software-1.6.7.0 renderman_gaffer_plugin-27.0 aces_ocio-1.3.0
         command: gaffer
       - name: "Gaffer 1.6.7.0 + Arnold Core 7.4.4.1 + Renderman 27.0"
-        rez_package: gaffer_software-1.6.7.0 arnold_core_plugin-7.4.4.1 renderman_gaffer_plugin-27.0 gafferTools_gaffer_plugin aces_ocio-1.3.0
+        rez_package: gaffer_software-1.6.7.0 arnold_core_plugin-7.4.4.1 renderman_gaffer_plugin-27.0 gafferTools_gaffer_plugin aces_ocio-1.3.0 rombotools_plugin-2.0.4
         command: gaffer
 
   - name: "Guerilla Render 2.4.4"
