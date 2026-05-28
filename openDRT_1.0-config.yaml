@@ -162,12 +162,12 @@ applications:
         rez_package: gaffer_software-1.6.7.0 arnold_core_plugin-7.4.4.1 renderman_gaffer_plugin-27.0 gafferTools_gaffer_plugin opendrt_ocio-1.0.0 rombotools_plugin-2.0.4
         command: gaffer
 
-  - name: "Guerilla Render 2.4.4"
+  - name: "Guerilla Render 2.4.29"
     department: "Assembly / LookDev / Lighting"
     icon: icons\dcc\guerilla.ico
     environment:
-      - name: "Guerilla Render 2.4.4"
-        rez_package: guerilla_software-2.4.4 opendrt_ocio-1.0.0
+      - name: "Guerilla Render 2.4.29"
+        rez_package: guerilla_software-2.4.29 opendrt_ocio-1.0.0
         command: guerilla
   
   - name: "Nuke 16.1v1"
