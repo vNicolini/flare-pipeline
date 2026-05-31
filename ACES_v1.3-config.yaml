@@ -115,7 +115,7 @@ applications:
         rez_package: openimageio_software-3.1.11.0 aces_ocio-1.3.0
         command: python F:\Pipeline\dev\flare-convert\main.py
 
-  - name: "Mari 7.1v2"
+  - name: "Mari"
     department: "Texturing"
     icon: icons\dcc\mari.png
     environment:
@@ -125,6 +125,12 @@ applications:
       - name: "Mari 7.1v2"
         rez_package: mari_software-7.1.2 aces_ocio-1.3.0
         command: Mari7.1v2 -platform windows:nowmpointer
+      - name: "Mari 7.5v2 Non-Commercial" 
+        rez_package: mari_software-7.5.2 aces_ocio-1.3.0
+        command: Mari7.5v2 --nc -platform windows:nowmpointer
+      - name: "Mari 7.5v2"
+        rez_package: mari_software-7.5.2 aces_ocio-1.3.0
+        command: Mari7.5v2 -platform windows:nowmpointer
 
   - name: "Adobe Substance 3D Painter 11.0.1"
     department: "Texturing"
