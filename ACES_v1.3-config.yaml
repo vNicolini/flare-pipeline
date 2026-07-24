@@ -62,21 +62,21 @@ applications:
         rez_package: houdini_software-20.5.684 axiom_plugin-3.3.086 renderman_houdini_plugin-27.3 dja_filmFX_houdini_plugin rebelway_houdini_plugin aces_ocio-1.3.0 houdini_labs_plugin-20.5 
         command: houdinifx
 
-  - name: "Houdini 21.0.559"
+  - name: "Houdini 21.0.729"
     department: "CFX / FX / Environment"
     icon: icons\dcc\houdini.ico
     environment:
-      - name: "Houdini Core 21.0.559"
-        rez_package: houdini_software-21.0.559 houdini_labs_plugin-21 aces_ocio-1.3.0
+      - name: "Houdini Core 21.0.729"
+        rez_package: houdini_software-21.0.729 houdini_labs_plugin-21 aces_ocio-1.3.0
         command: houdinicore
-      - name: "Houdini Core 21.0.559 + Renderman 27.1"
-        rez_package: houdini_software-21.0.559 renderman_houdini_plugin-27.1 houdini_labs_plugin-21 aces_ocio-1.3.0
+      - name: "Houdini Core 21.0.729 + Renderman 27.1"
+        rez_package: houdini_software-21.0.729 renderman_houdini_plugin-27.1 houdini_labs_plugin-21 aces_ocio-1.3.0
         command: houdinicore
-      - name: "Houdini FX 21.0.559 + Renderman 27.1"
-        rez_package: houdini_software-21.0.559 axiom_plugin-3.3.086 renderman_houdini_plugin-27.1 houdini_labs_plugin-21 aces_ocio-1.3.0
+      - name: "Houdini FX 21.0.729 + Renderman 27.1"
+        rez_package: houdini_software-21.0.729 axiom_plugin-3.3.086 renderman_houdini_plugin-27.1 houdini_labs_plugin-21 aces_ocio-1.3.0
         command: houdinifx
-      - name: "Houdini FX 21.0.559 Workshops (Renderman)"
-        rez_package: houdini_software-21.0.559 axiom_plugin-3.3.086 renderman_houdini_plugin-27.1 dja_filmFX_houdini_plugin rebelway_houdini_plugin houdini_labs_plugin-21 aces_ocio-1.3.0
+      - name: "Houdini FX 21.0.729 Workshops (Renderman)"
+        rez_package: houdini_software-21.0.729 axiom_plugin-3.3.086 renderman_houdini_plugin-27.1 dja_filmFX_houdini_plugin rebelway_houdini_plugin houdini_labs_plugin-21 aces_ocio-1.3.0
         command: houdinifx
 
   - name: "Houdini 22.0.368"
