@@ -199,11 +199,11 @@ applications:
         rez_package: nuke_software-16.1.1 opendrt_ocio-1.0.0
         command: nuke16.1 --player
   
-  - name: "OpenRV 1.0"
+  - name: "OpenRV 4.0"
     department: "Compositing / Editing / Review"
     icon: icons\dcc\openrv.png
     environment:
-      - name: "OpenRV 1.0"
+      - name: "OpenRV 4.0"
         rez_package: openrv_software opendrt_ocio-1.0.0
         command: rv.exe
   
