@@ -41,7 +41,7 @@ applications:
     icon: icons\dcc\houdini.ico
     environment:
       - name: "Houdini Core 20.5.684"
-        rez_package: houdini_software-20.5.684 houdini_odtools_plugin-4.96
+        rez_package: houdini_software-20.5.684 houdini_odtools_plugin-4.96 houdini_mops_plugin-1.12.0
         command: houdinicore
       - name: "Houdini Core 20.5.684 + HtoA 6.5.3.0"
         rez_package: houdini_software-20.5.684 arnold_houdini_plugin-6.5.3.0 opendrt_ocio-1.0.0 houdini_labs_plugin-20.5 rombotools_plugin-2.0.4 houdini_odtools_plugin-4.96 houdini_mops_plugin-1.12.0
