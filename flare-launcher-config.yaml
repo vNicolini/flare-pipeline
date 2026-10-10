@@ -174,29 +174,29 @@ applications:
         rez_package: guerilla_software-2.4.29
         command: guerilla
   
-  - name: "Nuke 16.1v1"
+  - name: "Nuke 16.1v4"
     department: "Compositing / Editing / Review"
     icon: icons\dcc\nuke.png
     environment:
-      - name: "Nuke 16.1v1 Non-Commercial"
-        rez_package: nuke_software-16.1.1 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin nuke_volumetricNoise_plugin-1.02.0.0
+      - name: "Nuke 16.1v4 Non-Commercial"
+        rez_package: nuke_software-16.1.4 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin nuke_volumetricNoise_plugin-1.02.0.0
         command: nuke16.1 --nc
-      - name: "NukeStudio 16.1v1 Non-Commercial"
-        rez_package: nuke_software-16.1.1 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin nuke_volumetricNoise_plugin-1.02.0.0
+      - name: "NukeStudio 16.1v4 Non-Commercial"
+        rez_package: nuke_software-16.1.4 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin nuke_volumetricNoise_plugin-1.02.0.0
         command: nuke16.1 --studio --nc
-      - name: "NukeX 16.1v1 Non-Commercial"
-        rez_package: nuke_software-16.1.1 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin nuke_volumetricNoise_plugin-1.02.0.0
+      - name: "NukeX 16.1v4 Non-Commercial"
+        rez_package: nuke_software-16.1.4 nuke_buddySystem_plugin nuke_gizmo_plugin nuke_animatedSnap3D_plugin nuke_multiChannelSplit_plugin nuke_mmColorTarget_plugin nuke_nst_plugin nuke_volumetricNoise_plugin-1.02.0.0
         command: nuke16.1 --nukex --nc
   
-  - name: "Hiero 16.1v1"
+  - name: "Hiero 16.1v4"
     department: "Compositing / Editing / Review"
     icon: icons\dcc\hiero.png
     environment:
-      - name: "Hiero 16.1v1"
-        rez_package: nuke_software-16.1.1
+      - name: "Hiero 16.1v4"
+        rez_package: nuke_software-16.1.4
         command: nuke16.1 --hiero
-      - name: "Hiero Player 16.1v1"
-        rez_package: nuke_software-16.1.1
+      - name: "Hiero Player 16.1v4"
+        rez_package: nuke_software-16.1.4
         command: nuke16.1 --player
   
   - name: "OpenRV 4.0"
