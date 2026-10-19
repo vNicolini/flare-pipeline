@@ -93,16 +93,16 @@ applications:
     icon: icons\dcc\houdini.ico
     environment:
       - name: "Houdini Core 22.0.429"
-        rez_package: houdini_software-22.0.429 houdini_labs_plugin-22 aces_ocio-1.3.0 houdini_odtools_plugin-4.96 houdini_mops_plugin-1.12.0 houdini_qlib_plugin-0.2.285
+        rez_package: houdini_software-22.0.429 houdini_labs_plugin-22 aces_ocio-1.3.0 houdini_odtools_plugin-4.96 houdini_mops_plugin-1.12.0 houdini_qlib_plugin-0.2.285 houdini_bms_converter_plugin
         command: houdinicore
       - name: "Houdini Core 22.0.429 + HtoA 6.5.3.5"
-        rez_package: houdini_software-22.0.429 arnold_houdini_plugin-6.5.3.5 houdini_labs_plugin-22 aces_ocio-1.3.0 rombotools_plugin-2.0.4 houdini_odtools_plugin-4.96 houdini_mops_plugin-1.12.0 houdini_qlib_plugin-0.2.285
+        rez_package: houdini_software-22.0.429 arnold_houdini_plugin-6.5.3.5 houdini_labs_plugin-22 aces_ocio-1.3.0 rombotools_plugin-2.0.4 houdini_odtools_plugin-4.96 houdini_mops_plugin-1.12.0 houdini_qlib_plugin-0.2.285 houdini_bms_converter_plugin
         command: houdinicore
       - name: "Houdini FX 22.0.429 + HtoA 6.5.3.5"
-        rez_package: houdini_software-22.0.429 axiom_plugin-3.3.086 arnold_houdini_plugin-6.5.3.5 houdini_labs_plugin-22 aces_ocio-1.3.0 rombotools_plugin-2.0.4 houdini_odtools_plugin-4.96 houdini_mops_plugin-1.12.0 houdini_qlib_plugin-0.2.285
+        rez_package: houdini_software-22.0.429 axiom_plugin-3.3.086 arnold_houdini_plugin-6.5.3.5 houdini_labs_plugin-22 aces_ocio-1.3.0 rombotools_plugin-2.0.4 houdini_odtools_plugin-4.96 houdini_mops_plugin-1.12.0 houdini_qlib_plugin-0.2.285 houdini_bms_converter_plugin
         command: houdinifx
       - name: "Houdini FX 22.0.429 Workshops (Arnold)"
-        rez_package: houdini_software-22.0.429 axiom_plugin-3.3.086 arnold_houdini_plugin-6.5.3.5 dja_filmFX_houdini_plugin rebelway_houdini_plugin houdini_labs_plugin-22 aces_ocio-1.3.0 rombotools_plugin-2.0.4 houdini_odtools_plugin-4.96 houdini_mops_plugin-1.12.0 houdini_qlib_plugin-0.2.285
+        rez_package: houdini_software-22.0.429 axiom_plugin-3.3.086 arnold_houdini_plugin-6.5.3.5 dja_filmFX_houdini_plugin rebelway_houdini_plugin houdini_labs_plugin-22 aces_ocio-1.3.0 rombotools_plugin-2.0.4 houdini_odtools_plugin-4.96 houdini_mops_plugin-1.12.0 houdini_qlib_plugin-0.2.285 houdini_bms_converter_plugin
         command: houdinifx
 
   - name: "Flare TX Converter"
