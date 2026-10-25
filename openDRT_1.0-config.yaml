@@ -124,7 +124,7 @@ applications:
       - name: "Houdini FX 22.0.466 Workshops (Arnold)"
         rez_package: houdini_software-22.0.466 axiom_plugin-3.3.086 arnold_houdini_plugin-6.5.4.0 dja_filmFX_houdini_plugin rebelway_houdini_plugin houdini_labs_plugin-22 opendrt_ocio-1.0.0 rombotools_plugin-2.0.4 houdini_odtools_plugin-4.96 houdini_mops_plugin-1.12.0 houdini_qlib_plugin-0.2.285 houdini_bms_converter_plugin houdini_fxhoudinimcp_plugin-2.28.2
         command: houdinifx
-      - name: "Houdini FX 22.0.466 Workshops (Arnold) with MPC"
+      - name: "Houdini FX 22.0.466 Workshops (Arnold) with MCP"
         rez_package: houdini_software-22.0.466 axiom_plugin-3.3.086 arnold_houdini_plugin-6.5.4.0 dja_filmFX_houdini_plugin rebelway_houdini_plugin houdini_labs_plugin-22 opendrt_ocio-1.0.0 rombotools_plugin-2.0.4 houdini_odtools_plugin-4.96 houdini_mops_plugin-1.12.0 houdini_qlib_plugin-0.2.285 houdini_bms_converter_plugin houdini_fxhoudinimcp_plugin-2.28.2
         command: houdinifx
 
